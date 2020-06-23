@@ -1,0 +1,11 @@
+/* --------------------------- Share menu ---------------------------*/
+.share {
+  animation-name: share-pop;
+  animation-duration: 5s;
+  position:;
+}
+
+@@keyframes share-pop {
+  0%  {right: -3em;}
+  100%{right: -.75em;}
+}
