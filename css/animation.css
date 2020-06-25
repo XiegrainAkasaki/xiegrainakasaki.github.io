@@ -1,0 +1,21 @@
+.share {
+  animation: share-pop .5s 1.5s forwards;
+}
+
+@media only screen and (min-width: 769px) {
+  /* --------------------------- Share menu ---------------------------*/
+  @keyframes share-pop {
+    100% {
+      right: -.75em;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  @keyframes share-pop {
+    100% {
+      bottom: 2em;
+      opacity: 1;
+    }
+  }
+}
