@@ -37,7 +37,7 @@ body {
   color: #FFFFFF;
   position: fixed;
   right: 0;
-  transition: 1s ease;
+  transition: .5s ease;
   z-index: 3;
 }
 .main-menu a {
