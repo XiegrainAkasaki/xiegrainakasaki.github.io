@@ -1,7 +1,8 @@
 html, body {
   font-family: 'Josefin Sans', sans-serif;
-  user-select: none;
   height: 100%;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
