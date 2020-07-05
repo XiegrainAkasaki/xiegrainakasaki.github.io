@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-US" dir="ltr">
   <head>
     <!-- Metadata -->
     <meta charset="utf-8">
@@ -13,9 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
 
     <!-- Script -->
-    <script src="js/handler.js"></script>
-    <script src="js/animation-handler.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/440989a3f5.js" crossorigin="anonymous"></script>
+    <script src="js/handler.js"></script>
+    <script src="js/animation.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113155729-5"></script>
@@ -29,6 +30,11 @@
   </head>
   <body>
     <!-- Navigation bar -->
+    <button class="hamburger-menu-button" type="button">
+      <span class="hamburger-menu-box">
+        <span class="hamburger-menu"></span>
+      </span>
+    </button>
     <div class="navbar">
       <ul class="link main-menu">
         <li><a href="#">Home</a></li>
@@ -59,8 +65,8 @@
       <div class="content">
         <p>Xiegrain Akasaki</p>
       </div>
-      <footer>
-        <p>This webpage was built by Xiegrain Akasaki</p>
+      <footer class="link">
+        <p>This webpage was built by <a href="https://xiegrainakasaki.github.io">Xiegrain Akasaki</a></p>
       </footer>
     </div>
   </body>

@@ -1,5 +1,6 @@
+/* --------------------------- Share menu ---------------------------*/
 .share {
-  animation: share-pop .5s 1.5s forwards;
+  animation: share-pop 1s 1s forwards;
 }
 
 @media only screen and (min-width: 769px) {
@@ -12,6 +13,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+  /* --------------------------- Share menu ---------------------------*/
   @keyframes share-pop {
     100% {
       bottom: 2em;
