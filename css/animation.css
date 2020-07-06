@@ -16,8 +16,7 @@
   /* --------------------------- Share menu ---------------------------*/
   @keyframes share-pop {
     100% {
-      bottom: 2em;
-      opacity: 1;
+      bottom: 1.5em;
     }
   }
 }
