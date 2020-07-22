@@ -7,15 +7,16 @@
     <title>Xiegrain Akasaki</title>
 
     <!-- Link -->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
 
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/440989a3f5.js" crossorigin="anonymous"></script>
     <script src="js/handler.js"></script>
+    <script src="js/animation.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113155729-5"></script>
@@ -29,12 +30,12 @@
   </head>
   <body>
     <!-- Navigation bar -->
+    <button class="hamburger-menu-button" type="button">
+      <span class="hamburger-menu-box">
+        <span class="hamburger-menu"></span>
+      </span>
+    </button>
     <div class="navbar">
-      <button class="burger-button" type="button">
-        <span class="burger-box">
-          <span class="burger"></span>
-        </span>
-      </button>
       <ul class="link main-menu">
         <li><a class="menu-link home">Home</a></li>
         <li><a class="menu-link about">About</a></li>
@@ -59,16 +60,14 @@
       </ul>
     </div>
 
-    <div class="content">
-      <p>Xiegrain Akasaki</p>
-    </div>
-    
     <!-- Background -->
-    <div class="container-background"><div>
-
-    <!-- Footer -->
-    <footer class="link">
-      <p>This webpage was built by <a href="https://xiegrainakasaki.github.io">Xiegrain Akasaki</a></p>
-    </footer>
+    <div class="container-background">
+      <div class="content">
+        <p>Xiegrain Akasaki</p>
+      </div>
+      <footer class="link">
+        <p>This webpage was built by <a href="https://xiegrainakasaki.github.io">Xiegrain Akasaki</a></p>
+      </footer>
+    </div>
   </body>
 </html>

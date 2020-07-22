@@ -1,10 +1,16 @@
-/* --------------------------- Share menu ---------------------------*/
 .share-pop {
   animation: share-pop 1s .7s forwards;
 }
 
-@media only screen and (min-width: 769px) {
-  /* --------------------------- Share menu ---------------------------*/
+@media only screen and (max-width: 480px) { /*-- Mobile phone --*/
+  @keyframes share-pop {
+    100% {
+      bottom: 1.5em;
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) { /*-- Tablet --*/
   @keyframes share-pop {
     100% {
       right: -.75em;
@@ -12,11 +18,8 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-  /* --------------------------- Share menu ---------------------------*/
-  @keyframes share-pop {
-    100% {
-      bottom: 1.5em;
-    }
-  }
+@media only screen and (min-width: 769px) { /*-- Laptop --*/
+}
+
+@media only screen and (min-width: 1025px) { /*-- Desktop --*/
 }

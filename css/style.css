@@ -1,28 +1,20 @@
 html, body {
+  -webkit-tap-highlight-color: transparent;
   font-family: 'Josefin Sans', sans-serif;
   height: 100%;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-body {
-  top: 0;
   margin: 0;
+  user-select: none;
 }
-
-/*-- Hyperlink --*/
-.link {
+.link { /*-- Hyperlink --*/
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-.link a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/*-- Hamburger menu button --*/
-.hamburger-menu-button {
+  }
+  .link a {
+    color: inherit;
+    text-decoration: none;
+  }
+.burger-button { /*-- Burger button --*/
   float: right;
   position: fixed;
   top: 10px;
@@ -30,61 +22,47 @@ body {
   visibility: hidden;
   z-index: 4;
 }
-
-/*-- Main menu --*/
-.navbar {
+.navbar { /*-- Main navigation --*/
   font-size: 2em;
   color: #FFFFFF;
   position: fixed;
   right: 0;
   transition: .5s ease;
   z-index: 3;
-}
-.main-menu a {
-  text-shadow: 0 0 .25em #000000;
-}
-
-/*-- Main menu >> After --*/
-.main-menu li::after {
-  content: '';
-  display: block;
-  border-bottom: .0625em solid #E31200;
-  transition: .3s ease;
-  width: 0;
-}
-
-/*-- Main menu > Hover > After --*/
-.main-menu li:hover::after {
-  width: 100%;
-}
-
-/*-- Share --*/
-.share {
+  }
+  .main-menu a {
+    text-shadow: 0 0 .25em #000000;
+  }
+  .main-menu li::after { /*-- Main menu >> After --*/
+    content: '';
+    display: block;
+    border-bottom: .0625em solid #FFC0CB;
+    transition: .3s ease;
+    width: 0;
+  }
+  .main-menu li:hover::after { /*-- Main menu > Hover > After --*/
+    width: 100%;
+  }
+.share { /*-- Share menu --*/
   color: #FFFFFF;
   position: fixed;
   text-align: center;
   white-space: nowrap;
   z-index: 1;
-}
-.share p {
-  text-shadow: 0 0 .5em #000000;
-}
-
-/*-- Share menu > Hover --*/
-.social-share .fab:hover {
-  color: red;
-  opacity: .7;
-  transition: .3s;
-}
-
-/*-- First container --*/
-.container-background {
+  }
+  .share p { /*-- Menu title --*/
+    text-shadow: 0 0 .5em #000000;
+  }
+  .social-share .fab:hover { /*-- Icon > Hover --*/
+    color: #FFC0CB;
+    transition: .3s ease;
+  }
+.container-background { /*-- Background --*/
   background: url("../background.jpg") center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
-
 .content p {
   font-size: 5em;
   font-weight: 500;
@@ -95,64 +73,26 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/*-- Footer --*/
-footer {
+footer { /*-- Footer --*/
+  bottom: 0;
   color: #FFFFFF;
   font-size: .75em;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
   left: 50%;
+  position: fixed;
   transform: translateX(-50%);
   white-space: nowrap;
   z-index: 0;
-}
-footer p {
-  margin: 0 0 .5em 0;
-}
-footer a:hover {
-  color: red;
-  transition: .3s ease;
-}
-
-
-/*----------------------------------------------------------------------------*/
-
-
-/*-- Media query desktop --*/
-@media only screen and (min-width: 769px) {
-  /*-- Main menu --*/
-  .navbar {
-    right: 1em;
   }
-  .main-menu li {
-    margin-top: 1em;
+  footer p {
+    margin: 0 0 .5em 0;
+  }
+  footer a:hover {
+    color: #FFC0CB;
+    transition: .3s ease;
   }
 
-  /*-- Share menu --*/
-  .share {
-    top: 50%;
-    right: -4em;
-    transform: translateY(-50%);
-  }
-  .share p {
-    padding: 0 1em 0 0;
-    transform: rotateZ(90deg);
-  }
-  .social-share li {
-    padding: 1em 0 0 0;
-  }
-}
-
-
-/*----------------------------------------------------------------------------*/
-
-
-/*-- Media query mobile --*/
-@media only screen and (max-width: 768px) {
-  /*-- Main menu button --*/
-  .hamburger-menu-button {
+@media only screen and (max-width: 480px) { /*-- Mobile phone --*/
+  .burger-button { /*-- Main menu button --*/
     padding: 15px;
     display: inline-block;
     cursor: pointer;
@@ -164,77 +104,129 @@ footer a:hover {
     transition-timing-function: linear;
     overflow: visible;
     visibility: visible;
-  }
-  .hamburger-menu-box {
-    width: 40px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-  }
-  .hamburger-menu {
-    display: block;
-    top: 52%;
-  }
-  .hamburger-menu-button:hover,
-  .hamburger-menu-button.is-active:hover {
-    opacity: 0.7;
-  }
-  .hamburger-menu-button.is-active .hamburger-menu-button-menu,
-  .hamburger-menu-button.is-active .hamburger-menu-button-menu::before,
-  .hamburger-menu-button.is-active .hamburger-menu-button-menu::after {
-    background-color: #000000;
-  }
-  .hamburger-menu,
-  .hamburger-menu::before,
-  .hamburger-menu::after {
-    width: 40px;
-    height: 2px;
-    background-color: #000;
-    border-radius: 6px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-  .hamburger-menu::before, .hamburger-menu::after {
-    content: '';
-    display: block;
-  }
-  .hamburger-menu::before {
-    top: -10px;
-  }
-  .hamburger-menu::after {
-    bottom: -10px;
-  }
+    }
+    .burger-box {
+      width: 40px;
+      height: 24px;
+      display: inline-block;
+      position: relative;
+    }
+    .burger {
+      display: block;
+      top: 52%;
+    }
+    .burger-button:hover,
+    .burger-button.is-active:hover {
+      opacity: 0.7;
+    }
+    .burger-button.is-active .burger-button-menu,
+    .burger-button.is-active .burger-button-menu::before,
+    .burger-button.is-active .burger-button-menu::after {
+      background-color: #000000;
+    }
+    .burger,
+    .burger::before,
+    .burger::after {
+      width: 40px;
+      height: 2px;
+      background-color: #000;
+      border-radius: 6px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+    .burger::before, .burger::after {
+      content: '';
+      display: block;
+    }
+    .burger::before {
+      top: -10px;
+    }
+    .burger::after {
+      bottom: -10px;
+    }
 
-  /*-- Main menu --*/
-  .navbar {
+  .navbar { /*-- Main navigation --*/
     background-color: rgba(85, 85, 85, .5);
     backdrop-filter: blur(30px);
     height: 100%;
     width: 0;
-  }
-  .navbar-active {
-    width: 90%;
-  }
-  .navbar .main-menu {
-    margin-top: 2em;
-  }
-  .main-menu li {
-    padding: 1.125em 2.25em 0 2.25em;
-  }
+    }
+    .navbar-active {
+      width: 90%;
+    }
+    .main-menu {
+      margin: 2em 0 0 0;
+    }
+    .main-menu li {
+      padding: 1.125em 2.25em 0 2.25em;
+    }
 
-  /*-- Share --*/
-  .share {
+  .share { /*-- Share menu --*/
     bottom: -2.5em;
     left: 50%;
     transform: translateX(-50%);
-  }
-  .share p {
-    margin: 0 0 .25em 0;
-  }
-  .share li {
-    display: inline-block;
-    margin: 0 .375em;
-  }
+    }
+    .share p {
+      margin: 0 0 .25em 0;
+    }
+    .share li {
+      display: inline-block;
+      margin: 0 .375em;
+    }
+}
+
+@media only screen and (min-width: 481px) { /*-- Tablet --*/
+  .navbar { /*-- Main navigation --*/
+    background-color: rgba(85, 85, 85, .5);
+    backdrop-filter: blur(30px);
+    height: 100%;
+    width: 0;
+    }
+    .navbar-active {
+      width: 90%;
+    }
+    .main-menu {
+      margin-top: 2em 0 0 0;
+    }
+    .main-menu li {
+      padding: 1.125em 2.25em 0 2.25em;
+    }
+
+  .share { /*-- Share menu --*/
+    top: 50%;
+    right: -4.5em;
+    transform: translateY(-50%);
+    }
+    .share p {
+      padding: 0 1em 0 0;
+      transform: rotateZ(90deg);
+    }
+    .social-share li {
+      padding: 1em 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 769px) { /*-- Laptop --*/
+  .navbar { /*-- Main navigation --*/
+    pointer-events: none;
+    background: none;
+    backdrop-filter: none;
+    width: auto;
+    right: 0;
+    }
+    .main-menu {
+      margin: auto;
+    }
+    .main-menu li {
+      pointer-events: all;
+      cursor: pointer;
+      margin: 1em .75em 0 .75em;
+      padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) { /*-- Desktop --*/
+
 }

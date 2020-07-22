@@ -1,11 +1,7 @@
 $(document).ready(function() {
-  $('.container-background').ready(function() {
-    $('link').ready(function() {
-      $('.share').addClass('share-pop');
-    });
-  });
+  $('.share').addClass('share-pop');
 
-  $('.hamburger-menu-button').on('click', function() {
+  $('.burger-button').on('click', function() {
     $('.navbar').toggleClass('navbar-active');
   });
 
