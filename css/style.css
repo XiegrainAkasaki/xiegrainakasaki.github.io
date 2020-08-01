@@ -63,7 +63,7 @@ html, body {
   background-size: cover;
   height: 100%;
 }
-.content p {
+.title-wrapper { /*-- Title --*/
   font-size: 5em;
   font-weight: 500;
   text-align: center;
@@ -72,7 +72,27 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+  }
+  .title {
+    /*transform: scale(0);*/
+    transition: .3s ease;
+  }
+  .title-active {
+    /*transform: scale(1, 1);*/
+  }
+.dynamic-content { /*-- Dynamic content --*/
+  background: white;
+  height: 0;
+  left: 50%;
+  opacity: .97;
+  position: fixed;
+  transform: translateX(-50%);
+  transition: .3s ease;
+  bottom: 0;
+  }
+  .content-active { /*-- Unused --*/
+    /*height: 100%;*/
+  }
 footer { /*-- Footer --*/
   bottom: 0;
   color: #FFFFFF;
@@ -146,7 +166,6 @@ footer { /*-- Footer --*/
     .burger::after {
       bottom: -10px;
     }
-
   .navbar { /*-- Main navigation --*/
     background-color: rgba(85, 85, 85, .5);
     backdrop-filter: blur(30px);
@@ -162,7 +181,6 @@ footer { /*-- Footer --*/
     .main-menu li {
       padding: 1.125em 2.25em 0 2.25em;
     }
-
   .share { /*-- Share menu --*/
     bottom: -2.5em;
     left: 50%;
@@ -175,9 +193,66 @@ footer { /*-- Footer --*/
       display: inline-block;
       margin: 0 .375em;
     }
+  .dynamic-content { /*-- Dynamic content --*/
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 481px) { /*-- Tablet --*/
+  .burger-button { /*-- Main menu button --*/
+    padding: 15px;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    overflow: visible;
+    visibility: visible;
+    }
+    .burger-box {
+      width: 40px;
+      height: 24px;
+      display: inline-block;
+      position: relative;
+    }
+    .burger {
+      display: block;
+      top: 52%;
+    }
+    .burger-button:hover,
+    .burger-button.is-active:hover {
+      opacity: 0.7;
+    }
+    .burger-button.is-active .burger-button-menu,
+    .burger-button.is-active .burger-button-menu::before,
+    .burger-button.is-active .burger-button-menu::after {
+      background-color: #000000;
+    }
+    .burger,
+    .burger::before,
+    .burger::after {
+      width: 40px;
+      height: 2px;
+      background-color: #000;
+      border-radius: 6px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+    .burger::before, .burger::after {
+      content: '';
+      display: block;
+    }
+    .burger::before {
+      top: -10px;
+    }
+    .burger::after {
+      bottom: -10px;
+    }
   .navbar { /*-- Main navigation --*/
     background-color: rgba(85, 85, 85, .5);
     backdrop-filter: blur(30px);
@@ -188,12 +263,11 @@ footer { /*-- Footer --*/
       width: 90%;
     }
     .main-menu {
-      margin-top: 2em 0 0 0;
+      margin: 2em 0 0 0;
     }
     .main-menu li {
       padding: 1.125em 2.25em 0 2.25em;
     }
-
   .share { /*-- Share menu --*/
     top: 50%;
     right: -4.5em;
@@ -206,9 +280,15 @@ footer { /*-- Footer --*/
     .social-share li {
       padding: 1em 0 0 0;
     }
+  .dynamic-content { /*-- Dynamic content --*/
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 769px) { /*-- Laptop --*/
+  .burger-button {
+    display: none;
+  }
   .navbar { /*-- Main navigation --*/
     pointer-events: none;
     background: none;
@@ -225,6 +305,9 @@ footer { /*-- Footer --*/
       margin: 1em .75em 0 .75em;
       padding: 0;
     }
+  .dynamic-content { /*-- Dynamic content --*/
+    width: 70%;
+  }
 }
 
 @media only screen and (min-width: 1025px) { /*-- Desktop --*/
