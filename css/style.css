@@ -49,6 +49,7 @@ html, body {
   text-align: center;
   white-space: nowrap;
   z-index: 1;
+  transition: 1s ease;
   }
   .share p { /*-- Menu title --*/
     text-shadow: 0 0 .5em #000000;
@@ -93,6 +94,12 @@ html, body {
   .content-active { /*-- Unused --*/
     /*height: 100%;*/
   }
+.content {
+  overflow-y: scroll;
+  }
+  .content::-webkit-scrollbar {
+    display: none;
+  }
 footer { /*-- Footer --*/
   bottom: 0;
   color: #FFFFFF;
@@ -102,6 +109,7 @@ footer { /*-- Footer --*/
   transform: translateX(-50%);
   white-space: nowrap;
   z-index: 0;
+  transition: 1s ease;
   }
   footer p {
     margin: 0 0 .5em 0;
@@ -196,6 +204,10 @@ footer { /*-- Footer --*/
   .dynamic-content { /*-- Dynamic content --*/
     width: 100%;
   }
+  .content {
+    margin: 4.5em 1em 0 1em;
+    max-height: 83%;
+  }
 }
 
 @media only screen and (min-width: 481px) { /*-- Tablet --*/
@@ -283,6 +295,10 @@ footer { /*-- Footer --*/
   .dynamic-content { /*-- Dynamic content --*/
     width: 100%;
   }
+  .content {
+    margin: 4.5em 2.5em 0 2.5em;
+    max-height: 89%;
+  }
 }
 
 @media only screen and (min-width: 769px) { /*-- Laptop --*/
@@ -302,11 +318,15 @@ footer { /*-- Footer --*/
     .main-menu li {
       pointer-events: all;
       cursor: pointer;
-      margin: 1em .75em 0 .75em;
+      margin: 1em 1em 0 1em;
       padding: 0;
     }
   .dynamic-content { /*-- Dynamic content --*/
     width: 70%;
+  }
+  .content {
+    margin: 0 2em 0 2em;
+    max-height: 97%;
   }
 }
 
