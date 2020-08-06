@@ -1,0 +1,70 @@
+.burger-button {
+  content: '';
+  background-color: grey;
+  width: 3vw;
+  height: 3vw;
+}
+.burger-box {
+  content: '';
+  padding: 1em;
+}
+.burger {
+  content: '';
+  padding: 1em;
+}
+
+/*-- Main menu button --*/
+.hamburger-menu-button {
+  padding: 15px;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  overflow: visible;
+  visibility: visible;
+}
+.hamburger-menu-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-menu {
+  display: block;
+  top: 52%;
+}
+.hamburger-menu-button:hover,
+.hamburger-menu-button.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger-menu-button.is-active .hamburger-menu-button-menu,
+.hamburger-menu-button.is-active .hamburger-menu-button-menu::before,
+.hamburger-menu-button.is-active .hamburger-menu-button-menu::after {
+  background-color: #000000;
+}
+.hamburger-menu,
+.hamburger-menu::before,
+.hamburger-menu::after {
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 6px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-menu::before, .hamburger-menu::after {
+  content: '';
+  display: block;
+}
+.hamburger-menu::before {
+  top: -10px;
+}
+.hamburger-menu::after {
+  bottom: -10px;
+}
