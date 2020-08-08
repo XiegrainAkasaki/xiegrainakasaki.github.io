@@ -48,7 +48,7 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
   background: rgba(85, 85, 85, .5);
   font-size: 1.25rem;
   height: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
   transition: .3s ease;
   width: 0;
