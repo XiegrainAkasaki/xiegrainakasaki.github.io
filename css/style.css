@@ -1,335 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   -webkit-tap-highlight-color: transparent;
+  color: #FFFFFF;
   font-family: 'Josefin Sans', sans-serif;
   height: 100%;
-  margin: 0;
   user-select: none;
 }
-.link { /*-- Hyperlink --*/
+body::-webkit-scrollbar { /*-- Scrollbar --*/
+  display: none;
+}
+
+.tx-shadow {
+  text-shadow: .5px .5px 1px #000000;
+}
+
+.link {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  }
-  .link a {
-    color: inherit;
-    text-decoration: none;
-  }
-.burger-button { /*-- Burger button --*/
-  float: right;
-  position: fixed;
-  top: 10px;
-  right: 5px;
-  visibility: hidden;
-  z-index: 4;
 }
-.navbar { /*-- Main navigation --*/
-  font-size: 2em;
-  color: #FFFFFF;
-  position: fixed;
-  right: 0;
-  transition: .5s ease;
-  z-index: 3;
-  }
-  .main-menu a {
-    text-shadow: 0 0 .25em #000000;
-  }
-  .main-menu li::after { /*-- Main menu >> After --*/
-    content: '';
-    display: block;
-    border-bottom: .0625em solid #FFC0CB;
-    transition: .3s ease;
-    width: 0;
-  }
-  .main-menu li:hover::after { /*-- Main menu > Hover > After --*/
-    width: 100%;
-  }
-.share { /*-- Share menu --*/
-  color: #FFFFFF;
-  position: fixed;
-  text-align: center;
-  white-space: nowrap;
-  z-index: 1;
-  transition: 1s ease;
-  }
-  .share p { /*-- Menu title --*/
-    text-shadow: 0 0 .5em #000000;
-  }
-  .social-share .fab:hover { /*-- Icon > Hover --*/
-    color: #FFC0CB;
-    transition: .3s ease;
-  }
-.container-background { /*-- Background --*/
-  background: url("../background.jpg") center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+.link a {
+  color: inherit;
+  text-decoration: none;
 }
-.title-wrapper { /*-- Title --*/
-  font-size: 5em;
-  font-weight: 500;
-  text-align: center;
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  }
-  .title {
-    /*transform: scale(0);*/
-    transition: .3s ease;
-  }
-  .title-active {
-    /*transform: scale(1, 1);*/
-  }
-.dynamic-content { /*-- Dynamic content --*/
-  background: white;
-  height: 0;
-  left: 50%;
-  opacity: .97;
-  position: fixed;
-  transform: translateX(-50%);
+.link a:hover {
+  cursor: pointer;
+}
+.link a:hover, .link li:hover {
+  color: #FFC0CB;
   transition: .3s ease;
-  bottom: 0;
-  }
-  .content-active { /*-- Unused --*/
-    /*height: 100%;*/
-  }
-.content {
-  overflow-y: scroll;
-  }
-  .content::-webkit-scrollbar {
-    display: none;
-  }
+}
+
+/*-- Sparator between parts and root elements --*/
+
+.burger-button { /*-- Burger button --*/
+  cursor: pointer;
+  float: right;
+  position: relative;
+  margin: .5rem;
+}
+.navbar { /*-- Navbar --*/
+  backdrop-filter: blur(30px);
+  background: rgba(85, 85, 85, .5);
+  font-size: 1.25rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transition: .3s ease;
+  width: 0;
+}
+.navbar-active {
+  width: 90%;
+}
+.navbar-spacer {
+  height: 2.5rem;
+}
+.main-menu li {
+  margin: 1rem 1rem 0 1rem;
+}
+.main-menu li::after {
+  border-top: .0125em solid #FFC0CB;
+  content: '';
+  display: block;
+  transition: .3s ease;
+  width: 0;
+}
+.main-menu li:hover::after {
+  width: 100%;
+}
+
+.title { /*-- Home title --*/
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.title p {
+  font-size: 5rem;
+}
+
+.share-container { /*-- Share button --*/
+  position: absolute;
+  transition: .3s ease;
+}
+.share {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .3s ease;
+}
+.share ul {
+  display: flex;
+}
+
 footer { /*-- Footer --*/
   bottom: 0;
-  color: #FFFFFF;
-  font-size: .75em;
+  font-size: .75rem;
   left: 50%;
-  position: fixed;
+  padding: .5em 0;
+  position: absolute;
   transform: translateX(-50%);
+  transition: .3s ease;
   white-space: nowrap;
-  z-index: 0;
-  transition: 1s ease;
-  }
-  footer p {
-    margin: 0 0 .5em 0;
-  }
-  footer a:hover {
-    color: #FFC0CB;
-    transition: .3s ease;
-  }
+}
+.pushed {
+  bottom: -1.75rem;
+}
 
-@media only screen and (max-width: 480px) { /*-- Mobile phone --*/
-  .burger-button { /*-- Main menu button --*/
-    padding: 15px;
-    display: inline-block;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    overflow: visible;
-    visibility: visible;
-    }
-    .burger-box {
-      width: 40px;
-      height: 24px;
-      display: inline-block;
-      position: relative;
-    }
-    .burger {
-      display: block;
-      top: 52%;
-    }
-    .burger-button:hover,
-    .burger-button.is-active:hover {
-      opacity: 0.7;
-    }
-    .burger-button.is-active .burger-button-menu,
-    .burger-button.is-active .burger-button-menu::before,
-    .burger-button.is-active .burger-button-menu::after {
-      background-color: #000000;
-    }
-    .burger,
-    .burger::before,
-    .burger::after {
-      width: 40px;
-      height: 2px;
-      background-color: #000;
-      border-radius: 6px;
-      position: absolute;
-      transition-property: transform;
-      transition-duration: 0.15s;
-      transition-timing-function: ease;
-    }
-    .burger::before, .burger::after {
-      content: '';
-      display: block;
-    }
-    .burger::before {
-      top: -10px;
-    }
-    .burger::after {
-      bottom: -10px;
-    }
-  .navbar { /*-- Main navigation --*/
-    background-color: rgba(85, 85, 85, .5);
-    backdrop-filter: blur(30px);
-    height: 100%;
-    width: 0;
-    }
-    .navbar-active {
-      width: 90%;
-    }
-    .main-menu {
-      margin: 2em 0 0 0;
-    }
-    .main-menu li {
-      padding: 1.125em 2.25em 0 2.25em;
-    }
-  .share { /*-- Share menu --*/
-    bottom: -2.5em;
+.background { /*-- Background --*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url("../assets/background.jpg") center;
+  height: 100%;
+  position: relative;
+}
+
+
+/*-- Breakpoint --*/
+
+@media (max-width: 425px) { /*-- Smartphone --*/
+  .background {
+    background: lime;
+  }
+  
+  .share-container { /*-- Share button --*/
+    bottom: 0;
+    height: 2.25rem;
     left: 50%;
     transform: translateX(-50%);
-    }
-    .share p {
-      margin: 0 0 .25em 0;
-    }
-    .share li {
-      display: inline-block;
-      margin: 0 .375em;
-    }
-  .dynamic-content { /*-- Dynamic content --*/
-    width: 100%;
   }
-  .content {
-    margin: 4.5em 1em 0 1em;
-    max-height: 83%;
+  .share {
+    max-height: 1em;
+    overflow: hidden;
+    top: 0;
   }
-}
-
-@media only screen and (min-width: 481px) { /*-- Tablet --*/
-  .burger-button { /*-- Main menu button --*/
-    padding: 15px;
-    display: inline-block;
+  .share p {
     cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    overflow: visible;
-    visibility: visible;
-    }
-    .burger-box {
-      width: 40px;
-      height: 24px;
-      display: inline-block;
-      position: relative;
-    }
-    .burger {
-      display: block;
-      top: 52%;
-    }
-    .burger-button:hover,
-    .burger-button.is-active:hover {
-      opacity: 0.7;
-    }
-    .burger-button.is-active .burger-button-menu,
-    .burger-button.is-active .burger-button-menu::before,
-    .burger-button.is-active .burger-button-menu::after {
-      background-color: #000000;
-    }
-    .burger,
-    .burger::before,
-    .burger::after {
-      width: 40px;
-      height: 2px;
-      background-color: #000;
-      border-radius: 6px;
-      position: absolute;
-      transition-property: transform;
-      transition-duration: 0.15s;
-      transition-timing-function: ease;
-    }
-    .burger::before, .burger::after {
-      content: '';
-      display: block;
-    }
-    .burger::before {
-      top: -10px;
-    }
-    .burger::after {
-      bottom: -10px;
-    }
-  .navbar { /*-- Main navigation --*/
-    background-color: rgba(85, 85, 85, .5);
-    backdrop-filter: blur(30px);
-    height: 100%;
-    width: 0;
-    }
-    .navbar-active {
-      width: 90%;
-    }
-    .main-menu {
-      margin: 2em 0 0 0;
-    }
-    .main-menu li {
-      padding: 1.125em 2.25em 0 2.25em;
-    }
-  .share { /*-- Share menu --*/
-    top: 50%;
-    right: -4.5em;
-    transform: translateY(-50%);
-    }
-    .share p {
-      padding: 0 1em 0 0;
-      transform: rotateZ(90deg);
-    }
-    .social-share li {
-      padding: 1em 0 0 0;
-    }
-  .dynamic-content { /*-- Dynamic content --*/
-    width: 100%;
+    margin: 0 0 .125rem 0;
   }
-  .content {
-    margin: 4.5em 2.5em 0 2.5em;
-    max-height: 89%;
+  .share ul {
+    justify-content: space-between;
+    width: 14em;
+  }
+  .share-active {
+    max-height: 100%;
+  }
+}
+  
+@media (min-width: 426px) { /*-- Tablet --*/
+  .background {
+    background: violet;
+  }
+
+  .share-container { /*-- Share button --*/
+    right: -4rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .share {
+    min-height: 17em;
+  }
+  .share p {
+    padding: 3px 0 0 0;
+    transform: rotateZ(90deg);
+  }
+  .share ul {
+    flex-direction: column;
+  }
+  .share li {
+    margin: 1em 0 0 0;
   }
 }
 
-@media only screen and (min-width: 769px) { /*-- Laptop --*/
-  .burger-button {
+@media (min-width: 769px) { /*-- Laptop --*/
+  .background {
+    background: royalblue;
+  }
+
+  .burger-button, .navbar-spacer { /*-- Burger button --*/
     display: none;
   }
-  .navbar { /*-- Main navigation --*/
-    pointer-events: none;
-    background: none;
+  .navbar { /*-- Navbar --*/
     backdrop-filter: none;
+    background: none;
+    pointer-events: none;
     width: auto;
-    right: 0;
-    }
-    .main-menu {
-      margin: auto;
-    }
-    .main-menu li {
-      pointer-events: all;
-      cursor: pointer;
-      margin: 1em 1em 0 1em;
-      padding: 0;
-    }
-  .dynamic-content { /*-- Dynamic content --*/
-    width: 70%;
   }
-  .content {
-    margin: 0 2em 0 2em;
-    max-height: 97%;
+  .main-menu li {
+    margin: 1em 1em 0 1em;
+    pointer-events: all;
   }
 }
 
-@media only screen and (min-width: 1025px) { /*-- Desktop --*/
-
+@media (min-width: 1025px) { /*-- Desktop --*/
+  .background {
+    background: gold;
+  }
 }

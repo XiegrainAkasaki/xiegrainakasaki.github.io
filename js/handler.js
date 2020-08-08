@@ -1,63 +1,31 @@
 $(document).ready(function() {
-  $('.share').addClass('share-pop'); /*-- Poped share menu --*/
-
-  $('.burger-button').on('click', function() { /*-- Expand navbar when button clicked --*/
+  $('.burger-button').click(function() {
+    $(this).text($(this).text() == 'menu' ? 'close' : 'menu');
     $('.navbar').toggleClass('navbar-active');
   });
 
-  $('.menu-link').on('click', function() { /*-- Collapsed navbar when link clicked --*/
-    $('.navbar').removeClass('navbar-active');
-  });
+  // Media query
 
-  $('.home').click(function() { /*-- Home action --*/
-    $('.dynamic-content').animate({height: '0'});
-    $('.title').css({'transform' : 'scale(' + 1 + ')'});
-    $('footer').css({'color' : '#FFFFFF'});
-    if ($(document).width() <= 768) {
-      $('.share').css({'color' : '#FFFFFF'});
-    };
-  });
+  // Smartphone
+  if ($(window).width() <= 425) {
+    $('.share p').click(function() {
+      $('.share').toggleClass('share-active');
+      $('footer').toggleClass('pushed');
+    });
+  };
 
-  $('.about, .showcase, .contact, .support').click(function() { /*-- Content action --*/
-    $('.title').css({'transform' : 'scale(' + 0 + ')'});
-    $('.dynamic-content').animate({height: '100%'});
-    $('footer').css({'color' : '#000000'});
-    if ($(document).width() <= 768) {
-      $('.share').css({'color' : '#000000'});
-    };
-  });
+  // Tablet
+  if ($(window).width() >= 426) {
+    $(window).on('load', function() {
+      $('.share-container').css({'right' : '-.75rem'});
+    });
+  };
 
-  $(document).on('click', '.about', function() {
-    $('.dynamic-content').empty();
-    $('.dynamic-content').load('about.html');
-  });
+  // Laptop
+  if ($(window).width() >= 769) {
+  };
 
-  $(document).on('click', '.showcase', function() {
-    $('.dynamic-content').empty();
-    $('.dynamic-content').load('showcase.html');
-  });
-
-  $(document).on('click', '.contact', function() {
-    $('.dynamic-content').empty();
-    $('.dynamic-content').load('contact.html');
-  });
-
-  $(document).on('click', '.support', function() {
-    $('.dynamic-content').empty();
-    $('.dynamic-content').load('support.html');
-  });
-});
-
-
-/*-- Repo --*/
-$('.about, .showcase, .contact, .support').on('click', function() {
-  $('.title').removeClass('title-active').delay(500).queue(function() {
-    $('.dynamic-content').addClass('content-active').dequeue();
-  });
-});
-
-$('.home').on('click', function() {
-  $('.dynamic-content').removeClass('content-active').delay(500).queue(function() {
-    $('.title').addClass('title-active').dequeue();
-  });
+  // Desktop
+  if ($(window).width() >= 1025) {
+  };
 });
