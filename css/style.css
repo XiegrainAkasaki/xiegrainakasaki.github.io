@@ -85,7 +85,7 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
 }
 
 .share-container { /*-- Share button --*/
-  position: absolute;
+  position: fixed;
   transition: .3s ease;
 }
 .share {
@@ -124,6 +124,7 @@ footer { /*-- Footer --*/
 
 /*-- Breakpoint --*/
 
+
 @media (max-width: 425px) { /*-- Smartphone --*/
   .background {
     background: lime;
@@ -159,9 +160,9 @@ footer { /*-- Footer --*/
   }
 
   .share-container { /*-- Share button --*/
-    right: -4rem;
     top: 50%;
     transform: translateY(-50%);
+    right: -4rem;
   }
   .share {
     min-height: 17em;
