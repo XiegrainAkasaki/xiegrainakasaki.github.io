@@ -41,7 +41,7 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
   cursor: pointer;
   float: right;
   position: relative;
-  margin: .5rem;
+  margin: .8125rem;
 }
 .navbar { /*-- Navbar --*/
   backdrop-filter: blur(30px);
@@ -57,13 +57,13 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
   width: 90%;
 }
 .navbar-spacer {
-  height: 2.5rem;
+  height: 2.1875rem;
 }
 .main-menu li {
-  margin: 1rem 1rem 0 1rem;
+  margin: .9375rem 1.875rem;
 }
 .main-menu li::after {
-  border-top: .0125em solid #FFC0CB;
+  border-top: 1px solid #FFC0CB;
   content: '';
   display: block;
   transition: .3s ease;
@@ -131,12 +131,12 @@ footer { /*-- Footer --*/
   
   .share-container { /*-- Share button --*/
     bottom: 0;
-    height: 2.25rem;
+    height: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
   }
   .share {
-    max-height: 1em;
+    max-height: 1rem;
     overflow: hidden;
     top: 0;
   }
