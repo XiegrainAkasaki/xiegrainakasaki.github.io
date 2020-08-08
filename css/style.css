@@ -7,6 +7,7 @@ html, body {
   -webkit-tap-highlight-color: transparent;
   color: #FFFFFF;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
   height: 100%;
   user-select: none;
 }
