@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    $('.burger-button').click(function() { //-- Toggle burger button
+        $(this).text($(this).text() == 'menu' ? 'close' : 'menu');
+        $('.navbar').toggleClass('navbar-active');
+    });
+
+      
     // Media Query
 
 
@@ -14,7 +20,7 @@ $(document).ready(function() {
     // Tablet
     if ($(window).width() >= 426) {
         $(window).on('load', function() { // Share menu poped
-            $('.share').toggleClass('share-poped');
+            $('.share-container').toggleClass('share-poped');
         });
     };
 

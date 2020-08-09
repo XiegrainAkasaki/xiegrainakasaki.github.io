@@ -8,15 +8,15 @@
 
 
 html, body {
-    width: 100%;
     height: 100%;
     overflow: hidden;
+    width: 100%;
 }
 
 
 body {
-    color: #FFFFFF;
     -webkit-tap-highlight-color: transparent;
+    color: #FFFFFF;
     font-family: 'Josefin Sans', sans-serif;
     user-select: none;
 }
@@ -36,16 +36,46 @@ body {
     transition: .3s ease;
 }
 .link a:hover {
-    cursor: pointer;
     color: #FFC0CB;
+    cursor: pointer;
 }
 
 
 /* Sparator between roots and parts */
 
 
-.navbar {
-    display: none;
+.burger-button {
+    float: right;
+    margin: .8125rem;
+}
+.navbar { /* Navbar */
+    background: tan;
+    bottom: 0;
+    font-size: 1.1875rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .3s ease;
+    width: 0;
+}
+.main-menu li {
+    margin: .9375rem 1.875rem;
+}
+.main-menu li::after {
+    border-top: 1px solid #FFC0CB;
+    content: '';
+    display: block;
+    transition: .3s ease;
+    width: 0;
+}
+.main-menu li:hover::after {
+    width: 100%;
+}
+.navbar-spacer {
+    height: 3.125rem;
+}
+.navbar-active {
+    width: 90%;
 }
 
 
@@ -66,6 +96,16 @@ body {
 }
 
 
+.title { /* Title */
+    font-size: 5rem;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 footer { /* Footer */
     bottom: 0;
     font-size: .75rem;
@@ -80,6 +120,9 @@ footer { /* Footer */
 
 .background { /* Background */
     height: 100%;
+}
+.bg-dim {
+    filter: brightness(.5);
 }
 
 
@@ -128,8 +171,6 @@ footer { /* Footer */
         transform: translateY(-50%);
     }
     .share {
-        position: relative;
-        transform: translateX(100%);
         height: 17.5rem;
     }
     .share p {
@@ -137,11 +178,11 @@ footer { /* Footer */
         transform: rotateZ(90deg);
     }
     .share ul {
-        height: 100%;
         flex-direction: column;
+        height: 100%;
     }
     .share-poped {
-        transform: translateX(25%);
+        transform: translate(25%, -50%);
     }
     
     
@@ -153,6 +194,9 @@ footer { /* Footer */
 @media (min-width: 769px) { /* Laptop */
     .background {
         background: royalblue;
+    }
+    .bg-dim {
+        filter: brightness(1);
     }
 }
 
