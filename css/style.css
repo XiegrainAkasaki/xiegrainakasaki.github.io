@@ -90,6 +90,7 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
 }
 
 .dynamic-content {
+  color: #000000;
   background: #FFFFFF;
   bottom: 0;
   content: 's';
