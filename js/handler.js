@@ -51,7 +51,7 @@ $(document).ready(function() {
     });
   
     $('.about, .showcase, .contact, .support').click (function() { //-- Menu action
-      $('.share, .burger-button, footer').css({'color' : '#FFA000'});
+      $('.share, .burger-button, footer').css({'color' : '#FFC0CB'});
     });
   };
 
