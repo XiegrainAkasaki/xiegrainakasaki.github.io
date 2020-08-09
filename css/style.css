@@ -120,6 +120,7 @@ footer { /* Footer */
 
 .background { /* Background */
     height: 100%;
+    transition: .3s ease;
 }
 .bg-dim {
     filter: brightness(.5);

@@ -2,6 +2,12 @@ $(document).ready(function() {
     $('.burger-button').click(function() { //-- Toggle burger button
         $(this).text($(this).text() == 'menu' ? 'close' : 'menu');
         $('.navbar').toggleClass('navbar-active');
+        $('.background').toggleClass('bg-dim');
+    });
+    
+    $('.menu-link').click(function() {
+        $('.navbar').removeClass('navbar-active');
+        $('.background').removeClass('bg-dim');
     });
 
       
