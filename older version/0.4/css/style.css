@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden !important;
+    -webkit-tap-highlight-color: transparent;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    user-select: none;
+}
+
+.tx-shadow { /*-- Shadow --*/
+    text-shadow: .5px .5px 1px #000000;
+}
+
+.link { /*-- Hyperlink --*/
+    list-style-type: none;
+}
+.link a {
+    color: inherit;
+    text-decoration: none;
+}
+.link a:hover {
+    cursor: pointer;
+    color: #FFC0CB;
+    transition: .3s ease;
+}  
+
+
+/*-- Sparator between parts and root elements --*/
+
+
+.burger-button { /*-- Burger button --*/
+    float: right;
+    cursor: pointer;
+    margin: .8125rem;
+}
+.navbar { /*-- Navbar --*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.1875rem;
+    bottom: 0;
+    width: 0;
+    background: gray;
+    transition: .3s ease;
+}
+.navbar-active {
+    width: 90%;
+}
+.navbar-spacer {
+    height: 3.125rem;
+}
+.main-menu li {
+    margin: 0.9375rem;
+}
+.main-menu li::after {
+    display: block;
+    content: '';
+    border-top: 1px solid #FFC0CB;
+    width: 0;
+    transition: .3s ease;
+}
+.main-menu li:hover::after {
+    width: 100%;
+}
+
+.share-container { /*-- Share button --*/
+    position: absolute;
+    transition: .3s ease;
+}
+.share {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s ease;
+}
+.share ul {
+    display: flex;
+}
+
+.dynamic-content { /*-- Dynamic content --*/
+    color: #000000;
+    background: #FFFFFF;
+    bottom: 0;
+    height: 0;
+    left: 50%;
+    opacity: .97;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    transition: .3s ease;
+}
+  
+
+.title { /*-- Home title --*/
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.title p {
+    font-size: 5rem;
+}
+  
+  
+footer { /*-- Footer --*/
+    bottom: 0;
+    font-size: .75rem;
+    left: 50%;
+    padding: .5rem 0;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    white-space: nowrap;
+}
+.pushed {
+    transform: translate(-50%, 100%);
+}
+
+.background { /*-- Background --*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url('../assets/background.jpg') center;
+    height: 100%;
+    transition: .3s ease;
+}
+.bg-dim {
+    filter: brightness(.5);
+}
+
+@media (max-width: 425px) { /*-- Smartphone --*/
+    .share-container { /*-- Share button --*/
+        bottom: 0;
+        height: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .share {
+        max-height: 1rem;
+        overflow: hidden;
+        top: 0;
+    }
+    .share p {
+        cursor: pointer;
+        margin: 0 0 .125rem 0;
+    }
+    .share ul {
+        justify-content: space-between;
+        width: 14rem;
+    }
+    .share-active {
+        max-height: 100%;
+    }
+    
+    .background {
+        background: sienna;
+    }
+}
+
+@media (min-width: 426px) { /*-- Tablet --*/
+    .share-container { /*-- Share button --*/
+        top: 50%;
+        transform: translate(100%,-50%);
+        right: 0;
+    }
+    .share {
+        min-height: 17rem;
+    }
+    .share p {
+        padding: 3px 0 0 0;
+        transform: rotateZ(90deg);
+    }
+    .share ul {
+        flex-direction: column;
+    }
+    .share li {
+        margin: 1em 0 0 0;
+    }
+    .share-pop {
+        transform: translate(.875rem, -50%);
+    }
+    
+    .background {
+        background: rebeccapurple;
+    }
+}
+
+@media (min-width: 769px) { /*-- Laptop --*/
+    .burger-button, .navbar-spacer {
+        display: none;
+    }
+    .navbar {
+        background: none;
+        width: auto;
+        pointer-events: none;
+    }
+    .main-menu li {
+        pointer-events: all;
+        margin: 1rem 1.25rem 0 1.25rem;
+    }
+
+    .dynamic-content {
+        width: 70%;
+    }
+
+    .background {
+        background: teal;
+    }
+    .bg-dim {
+        filter: brightness(1);
+    }
+}
+
+@media (min-width: 1025px) { /*-- Desktop --*/
+    .background {
+        background: goldenrod;
+    }
+}
