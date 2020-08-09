@@ -1,50 +1,72 @@
 $(document).ready(function() {
-  
-  // Media query
-  
-  // Smartphone
-  if ($(window).width() <= 425) {
-    $('.share p').click(function() {
-      $('.share').toggleClass('share-active');
-      $('footer').toggleClass('pushed');
-    });
-  };
-  
-  $('.burger-button').click(function() {
+  $('.burger-button').click(function() { //-- Toggle burger button
     $(this).text($(this).text() == 'menu' ? 'close' : 'menu');
     $('.navbar').toggleClass('navbar-active');
   });
 
-  $('.menu-link').click(function() {
+  $('.menu-link').click(function() { //-- Collapsed navbar when link clicked
     $('.burger-button').text('menu');
     $('.navbar').removeClass('navbar-active');
-    // if ($('.home').click()) {
-    //   $('.dynamic-content').css({'height' : '0'});
-    // } else if ($('.about').click()) {
-
-    // } else if ($('.showcase').click()) {
-
-    // } else if ($('.contact').click()) {
-
-    // } else if ($('.support').click()) {
-      
-    // } else {
-
-    // }
+  });
+  
+  $('.home').click(function() { //-- Home action
+    $('.dynamic-content').css({'height' : '0'});
   });
 
-  // Tablet
+  $('.about, .showcase, .contact, .support').click (function() { //-- Menu action
+    $('.dynamic-content').css({'height' : '100%'});
+  });
+
+  $('.about').click(function() {
+    $('.dynamic-content').empty();
+    $('.dynamic-content').load('about.html');
+  });
+
+  $('.showcase').click(function() {
+    $('.dynamic-content').empty();
+    $('.dynamic-content').load('showcase.html');
+  });
+
+  $('.contact').click(function() {
+    $('.dynamic-content').empty();
+    $('.dynamic-content').load('contact.html');
+  });
+  
+  $('.support').click(function() {
+    $('.dynamic-content').empty();
+    $('.dynamic-content').load('support.html');
+  });
+  
+  //-- Media query
+  
+  //-- Smartphone
+  if ($(window).width() <= 425) {
+    $('.share p').click(function() { //-- Toggle share menu in mobile
+      $('.share').toggleClass('share-active');
+      $('footer').toggleClass('pushed');
+    });
+
+    $('.home').click(function() { //-- Home action
+      $('.share, .burger-button, footer').css({'color' : '#FFFFFF'});
+    });
+  
+    $('.about, .showcase, .contact, .support').click (function() { //-- Menu action
+      $('.share, .burger-button, footer').css({'color' : '#FFA000'});
+    });
+  };
+
+  //-- Tablet
   if ($(window).width() >= 426) {
-    $(window).on('load', function() {
+    $(window).on('load', function() { //-- Poped share menu
       $('.share-container').css({'right' : '-.75rem'});
     });
   };
 
-  // Laptop
+  //-- Laptop
   if ($(window).width() >= 769) {
   };
 
-  // Desktop
+  //-- Desktop
   if ($(window).width() >= 1025) {
   };
 });

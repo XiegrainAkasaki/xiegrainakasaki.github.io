@@ -90,13 +90,16 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
 }
 
 .dynamic-content {
-  content: 's';
   background: #FFFFFF;
-  opacity: .97;
-  width: 100%;
+  bottom: 0;
+  content: 's';
+  height: 0;
+  left: 50%;
   opacity: .97;
   position: absolute;
-  height: 100%;
+  transform: translateX(-50%);
+  width: 100%;
+  transition: .3s ease;
 }
 
 .title { /*-- Home title --*/
@@ -164,7 +167,7 @@ footer { /*-- Footer --*/
     max-height: 100%;
   }
 }
-  
+
 @media (min-width: 426px) { /*-- Tablet --*/
   .background {
     background: violet;
@@ -207,6 +210,10 @@ footer { /*-- Footer --*/
   .main-menu li {
     margin: 1em 1em 0 1em;
     pointer-events: all;
+  }
+
+  .dynamic-content {
+    width: 70%;
   }
 }
 
