@@ -6,6 +6,7 @@ $(document).ready(function() {
     });
     
     $('.menu-link').click(function() {
+        $('.burger-button').text('menu');
         $('.navbar').removeClass('navbar-active');
         $('.background').removeClass('bg-dim');
     });

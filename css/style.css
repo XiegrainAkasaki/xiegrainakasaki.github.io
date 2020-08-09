@@ -98,6 +98,7 @@ body {
 
 
 .title { /* Title */
+    color: #000000;
     font-size: 5rem;
     left: 50%;
     position: absolute;
@@ -120,6 +121,9 @@ footer { /* Footer */
 
 
 .background { /* Background */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("../assets/background.jpg") center;
     height: 100%;
     transition: .3s ease;
 }
@@ -158,7 +162,7 @@ footer { /* Footer */
     
     
     .background {
-        background: slateblue;
+        /* background: slateblue; */
     }
     .pushed {
         transform: translate(-50%, 100%);
@@ -170,7 +174,7 @@ footer { /* Footer */
         overflow: hidden;
         right: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(100%, -50%);
     }
     .share {
         height: 17.5rem;
@@ -189,13 +193,26 @@ footer { /* Footer */
     
     
     .background {
-        background: teal;
+        /* background: teal; */
     }
 }
 
 @media (min-width: 769px) { /* Laptop */
+    .burger-button, .navbar-spacer { /* Navbar */
+        display: none;
+    }
+    .navbar {
+        background: none;
+        width: auto;
+        pointer-events: none;
+    }
+    .main-menu li {
+        pointer-events: all;
+    }
+
+
     .background {
-        background: royalblue;
+        /* background: royalblue; */
     }
     .bg-dim {
         filter: brightness(1);
@@ -204,6 +221,6 @@ footer { /* Footer */
 
 @media (min-width: 1025px) { /* Desktop */
     .background {
-        background: olive;
+        /* background: olive; */
     }
 }
