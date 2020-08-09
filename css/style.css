@@ -74,17 +74,6 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
   width: 100%;
 }
 
-.title { /*-- Home title --*/
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.title p {
-  font-size: 5rem;
-}
-
 .share-container { /*-- Share button --*/
   position: fixed;
   transition: .3s ease;
@@ -98,6 +87,27 @@ body::-webkit-scrollbar { /*-- Scrollbar --*/
 }
 .share ul {
   display: flex;
+}
+
+.dynamic-content {
+  content: 's';
+  background: #FFFFFF;
+  opacity: .97;
+  width: 100%;
+  opacity: .97;
+  position: absolute;
+  height: 100%;
+}
+
+.title { /*-- Home title --*/
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.title p {
+  font-size: 5rem;
 }
 
 footer { /*-- Footer --*/

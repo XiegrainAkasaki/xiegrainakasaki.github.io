@@ -16,20 +16,21 @@ $(document).ready(function() {
   });
 
   $('.menu-link').click(function() {
+    $('.burger-button').text('menu');
     $('.navbar').removeClass('navbar-active');
-    if ($('.home').click()) {
-      $('.dynamic-content').css({'height' : '0'});
-    } else if ($('.about').click()) {
+    // if ($('.home').click()) {
+    //   $('.dynamic-content').css({'height' : '0'});
+    // } else if ($('.about').click()) {
 
-    } else if ($('.showcase').click()) {
+    // } else if ($('.showcase').click()) {
 
-    } else if ($('.contact').click()) {
+    // } else if ($('.contact').click()) {
 
-    } else if ($('.support').click()) {
+    // } else if ($('.support').click()) {
       
-    } else () {
-      
-    }
+    // } else {
+
+    // }
   });
 
   // Tablet
