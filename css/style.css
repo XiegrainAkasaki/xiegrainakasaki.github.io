@@ -187,7 +187,7 @@ footer { /* Footer */
     
     
     .background {
-        background: slateblue;
+        /* background: slateblue; */
     }
     .pushed {
         transform: translate(-50%, 100%);
@@ -219,7 +219,7 @@ footer { /* Footer */
     
     
     .background {
-        background: teal;
+        /* background: teal; */
     }
 }
 
@@ -244,7 +244,7 @@ footer { /* Footer */
 
 
     .background {
-        background: royalblue;
+        /* background: royalblue; */
     }
     .bg-dim {
         filter: brightness(1);
@@ -253,6 +253,6 @@ footer { /* Footer */
 
 @media (min-width: 1025px) { /* Desktop */
     .background {
-        background: olive;
+        /* background: olive; */
     }
 }
