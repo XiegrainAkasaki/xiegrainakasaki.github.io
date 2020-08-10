@@ -241,6 +241,10 @@ footer { /* Footer */
     .dynamic-content { /* Content box */
         width: 70%;
     }
+    .content { /* Content */
+        top: 0;
+        bottom: 1.5rem;
+    }
 
 
     .background {
