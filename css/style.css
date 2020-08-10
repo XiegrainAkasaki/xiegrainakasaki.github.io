@@ -122,8 +122,9 @@ footer { /* Footer */
 
 .background { /* Background */
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background: url("../assets/background.jpg") center;
+    background-image: url("../assets/background.jpg");
     height: 100%;
     transition: .3s ease;
 }
