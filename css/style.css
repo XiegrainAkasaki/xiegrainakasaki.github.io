@@ -45,7 +45,7 @@ body {
 /* Sparator between roots and parts */
 
 
-.burger-button {
+.burger-button { /* Burger button */
     float: right;
     margin: .8125rem;
 }
@@ -97,7 +97,7 @@ body {
 }
 
 
-.dynamic-content {
+.dynamic-content { /* Content box */
     background-color: #8e6ceb;
     bottom: 0;
     height: 0;
@@ -107,6 +107,17 @@ body {
     transform: translateX(-50%);
     width: 100%;
     transition: .3s ease;
+}
+
+
+.content { /* Content */
+    overflow-y: scroll;
+    position: absolute;
+    background: grey;
+    left: 1rem;
+    top: 3.125rem;
+    right: 1rem;
+    bottom: 3rem;
 }
 
 
@@ -227,7 +238,7 @@ footer { /* Footer */
     }
 
 
-    .dynamic-content {
+    .dynamic-content { /* Content box */
         width: 70%;
     }
 

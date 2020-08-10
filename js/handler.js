@@ -12,7 +12,6 @@ $(document).ready(function() {
     });
 
     $('.home').click(function() { //-- Home action
-        $('.dynamic-content').empty();
         $('.dynamic-content').css('height', '0');
     });
     
