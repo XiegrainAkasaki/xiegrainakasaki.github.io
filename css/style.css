@@ -218,6 +218,13 @@ footer { /* Footer */
     }
     
     
+    .content { /* Content */
+        left: 2rem;
+        right: 2rem;
+        bottom: 1.5rem;
+    }
+
+
     .background {
         /* background: teal; */
     }
@@ -242,8 +249,9 @@ footer { /* Footer */
         width: 70%;
     }
     .content { /* Content */
+        left: 1rem;
+        right: 1rem;
         top: 0;
-        bottom: 1.5rem;
     }
 
 
