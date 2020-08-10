@@ -97,6 +97,19 @@ body {
 }
 
 
+.dynamic-content {
+    background-color: #8e6ceb;
+    bottom: 0;
+    height: 0;
+    left: 50%;
+    opacity: .97;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    transition: .3s ease;
+}
+
+
 .title { /* Title */
     color: #000000;
     font-size: 5rem;
@@ -163,12 +176,13 @@ footer { /* Footer */
     
     
     .background {
-        /* background: slateblue; */
+        background: slateblue;
     }
     .pushed {
         transform: translate(-50%, 100%);
     }
 }
+
 
 @media (min-width: 426px) { /* Tablet */
     .share-container { /* Share menu */
@@ -194,9 +208,10 @@ footer { /* Footer */
     
     
     .background {
-        /* background: teal; */
+        background: teal;
     }
 }
+
 
 @media (min-width: 769px) { /* Laptop */
     .burger-button, .navbar-spacer { /* Navbar */
@@ -212,8 +227,13 @@ footer { /* Footer */
     }
 
 
+    .dynamic-content {
+        width: 70%;
+    }
+
+
     .background {
-        /* background: royalblue; */
+        background: royalblue;
     }
     .bg-dim {
         filter: brightness(1);
@@ -222,6 +242,6 @@ footer { /* Footer */
 
 @media (min-width: 1025px) { /* Desktop */
     .background {
-        /* background: olive; */
+        background: olive;
     }
 }

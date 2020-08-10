@@ -5,19 +5,44 @@ $(document).ready(function() {
         $('.background').toggleClass('bg-dim');
     });
     
-    $('.menu-link').click(function() {
+    $('.menu-link').click(function() { //-- Collapsible navbar + background dim
         $('.burger-button').text('menu');
         $('.navbar').removeClass('navbar-active');
         $('.background').removeClass('bg-dim');
     });
 
+    $('.home').click(function() { //-- Home action
+        $('.dynamic-content').empty();
+        $('.dynamic-content').css('height', '0');
+    });
+    
+    $('.about, .showcase, .contact, .support').click(function() { //-- Main menu action
+        $('.dynamic-content').css('height', '100%');
+    });
+    
+    $('.about').click(function() {
+        $('.dynamic-content').empty();
+        $('.dynamic-content').load('about.html');
+    });
+    $('.showcase').click(function() {
+        $('.dynamic-content').empty();
+        $('.dynamic-content').load('showcase.html');
+    });
+    $('.contact').click(function() {
+        $('.dynamic-content').empty();
+        $('.dynamic-content').load('contact.html');
+    });
+    $('.support').click(function() {
+        $('.dynamic-content').empty();
+        $('.dynamic-content').load('support.html');
+    });
       
     // Media Query
 
 
     // Smartphone
     if ($(window).width() <= 425) {
-        $('.share p').click(function() { // Share menu toggle
+        $('.share p').click(function() { //-- Share menu toggle
             $('.share').toggleClass('share-active');
             $('footer').toggleClass('pushed');
         });
@@ -26,7 +51,7 @@ $(document).ready(function() {
 
     // Tablet
     if ($(window).width() >= 426) {
-        $(window).on('load', function() { // Share menu poped
+        $(window).on('load', function() { //-- Share menu poped
             $('.share-container').toggleClass('share-poped');
         });
     };
