@@ -48,6 +48,10 @@ body {
 .burger-button { /* Burger button */
     float: right;
     margin: .8125rem;
+    transition: .3s ease;
+}
+.burger-button:hover {
+    color: #FFC0CB;
 }
 .navbar { /* Navbar */
     background: tan;
@@ -98,10 +102,11 @@ body {
 
 
 .dynamic-content { /* Content box */
-    background-color: #8e6ceb;
+    background-color: #FFFFFF;
     bottom: 0;
     height: 0;
     left: 50%;
+    max-width: 64rem;
     opacity: .97;
     position: absolute;
     transform: translateX(-50%);
@@ -119,9 +124,9 @@ body {
 
 
 .content { /* Content */
+    color: black;
     overflow-y: scroll;
     position: absolute;
-    background: grey;
     left: 1rem;
     top: 3.125rem;
     right: 1rem;
@@ -271,7 +276,7 @@ footer { /* Footer */
         right: 1rem;
         top: 0;
     }
-
+    
 
     .background {
         /* background: royalblue; */
