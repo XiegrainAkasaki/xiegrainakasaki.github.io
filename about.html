@@ -20,7 +20,20 @@
         </div>
     </div>
     <div class="bio">
-        <p>Bio</p>
+        <div>
+            <div class="resume">
+                <h3>Education</h3>
+                <p>Unknown</p>
+            </div>
+                <div class="resume">
+                <h3>Skills</h3>
+                <p>3D Modeling, 3D Scuplting, 3D Animation</p>
+            </div>
+            <div class="resume">
+                <h3>Experience</h3>
+                <p>Unknown</p>
+            </div>
+        </div>
     </div>
     <div class="story">
         <p>Story</p>
@@ -36,23 +49,23 @@
             'story';
         grid-template-rows: 1.75rem auto auto;
     }
-        
-        
+
+
     .profile-pic {
         border-radius: 50%;
         height: 12.5rem;
         width: 12.5rem;
     }
-    
-    
+
+
     .name, .name p, .profile, .profile-link, .bio, .story {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    
-    .name {
+
+    .name { /* Name */
         font-size: 1.5rem;
         grid-area: name;
     }
@@ -68,7 +81,8 @@
         width:70%;
     }
 
-    .profile {
+
+    .profile { /* Profile pic n social link */
         grid-area: profile;
     }
     .profile-link div {
@@ -83,27 +97,36 @@
     .profile li {
         margin: .5rem;
     }
-    
-    
-    .bio {
+
+
+    .bio { /* Resume */
         grid-area: bio;
     }
-    
+    .resume {
+        margin: 1rem 0;
+    }
+    .resume p {
+        text-indent: 1.5rem;
+    }
+
+
     .story {
         grid-area: story;
     }
-    
+
+
     @media (min-width: 426px) {
-        .name {
-            font-size: 5rem;
-            grid-area: name;
-        }
         .content {
             grid-template-areas:
                 'name name'
                 'profile bio'
                 'story story';
             grid-template-rows: 10rem auto auto;
+        }
+
+        .name {
+        font-size: 5rem;
+        grid-area: name;
         }
     }
 </style>
