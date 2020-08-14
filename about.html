@@ -30,12 +30,20 @@
                 <p>3D Modeling, 3D Scuplting, 3D Animation</p>
             </div>
             <div class="resume">
-                <h3>Experience</h3>
-                <p>Unknown</p>
+                <h3>Experienced Softwares</h3>
+                <p>Blender 3D</p>
+            </div>
+            <div class="resume">
+                <h3>Interests</h3>
+                <p>Anime, Photography, Film and Movie</p>
+            </div>
+            <div class="resume">
+                <h3>Languages</h3>
+                <p>English, Bahasa</p>
             </div>
         </div>
     </div>
-    <div class="story">
+    <div class="summary">
         <p>Summary</p>
     </div>
 </div>
@@ -46,7 +54,7 @@
             'name'    
             'profile'
             'bio'
-            'story';
+            'summary';
         grid-template-rows: 1.75rem 30rem auto;
     }
 
@@ -58,7 +66,7 @@
     }
 
 
-    .name, .name p, .profile, .profile-link, .bio, .story {
+    .name, .name p, .profile, .profile-link, .bio, .summary {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -109,8 +117,8 @@
     }
 
 
-    .story {
-        grid-area: story;
+    .summary {
+        grid-area: summary;
     }
 
 
@@ -119,7 +127,7 @@
             grid-template-areas:
                 'name name'
                 'profile bio'
-                'story story';
+                'summary summary';
             grid-template-rows: 10rem auto auto;
         }
 
